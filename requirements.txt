@@ -1,0 +1,4 @@
+flask
+Flask 
+gunicorn
+groq==0.11.0
