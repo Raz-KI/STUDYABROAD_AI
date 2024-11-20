@@ -39,5 +39,5 @@ def ques_gen(user_message):
     # response_message = chat_completion.choices[0].message.content
     return chat_completion.choices[0].message.content
 
-if __name__ == '__main__':
-    app.run(debug=True)
+# if __name__ == '__main__':
+#     app.run(debug=True)
