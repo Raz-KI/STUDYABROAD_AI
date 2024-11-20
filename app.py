@@ -24,10 +24,15 @@ def chat():
     return ques_gen(user_message)
 
 def ques_gen(user_message):
+    system_content="""You are an expert in study abroad services help the user for the same. 
+                    Ask the user for detailes like the country they want to go to the college they prefer and the course they want to pursue. 
+                    Ask these questions one by one and in conversational form.
+                    Now when they make a decision, highlight the single word as i need to catch it in my python script
+                    """
     chat_completion = client.chat.completions.create(
         messages=[
             {
-                "role": "system","content":"You are an expert in study abroad services help the user for the same. Ask the user for detailes like the country they want to go to the college they prefer and the course they want to pursue. Ask these questions one by one and in conversational form"
+                "role": "system","content":system_content
             },
             {   
                 "role": "user","content": user_message,
